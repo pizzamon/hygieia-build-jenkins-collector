@@ -332,7 +332,7 @@ public class DefaultHudsonClient implements HudsonClient {
                     build.setBuildStatus(getBuildStatus(buildJson));
                     build.setStartedBy(firstCulprit(buildJson));
                     if (settings.isSaveLog()) {
-                        build.setLog(getLog(buildUrl));
+                        build.setLog(getLog(newUrl));
                     }
                     
                     //For git SCM, add the repoBranches. For other SCM types, it's handled while adding changesets
